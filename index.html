@@ -9,7 +9,8 @@
             const randomValue1 = Math.floor(Math.random() * 3) + 1;
             const randomValue2 = Math.floor(Math.random() * 3) + 1;
 
-            console.log(`Random values: randomizer1=${randomValue1}, randomizer2=${randomValue2}`);
+            // Log the generated values for visibility
+            console.log(`Generated values: randomizer1=${randomValue1}, randomizer2=${randomValue2}`);
 
             // Create a form dynamically
             const form = document.createElement("form");
@@ -33,8 +34,9 @@
             // Append the form to the body and submit
             document.body.appendChild(form);
 
+            console.log("Submitting the form with random values...");
+
             // Slight delay to see console logs
-            console.log("Redirecting now...");
             setTimeout(() => form.submit(), 500);
         };
     </script>
