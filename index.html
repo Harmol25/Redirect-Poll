@@ -3,12 +3,43 @@
 <head>
     <script type="text/javascript">
         window.onload = function() {
-            alert("Hello, your script is running!");
-            console.log("Script is running correctly.");
+            console.log('Script loaded');  // Check if the script is running
+
+            // Generate random numbers for both questions (1, 2, or 3)
+            const randomValue1 = Math.floor(Math.random() * 3) + 1;
+            const randomValue2 = Math.floor(Math.random() * 3) + 1;
+
+            console.log(`Random values: randomizer1=${randomValue1}, randomizer2=${randomValue2}`);
+
+            // Create a form dynamically
+            const form = document.createElement("form");
+            form.method = "GET";
+            form.action = "https://form.typeform.com/to/AUtyjS3E";
+
+            // Append hidden fields
+            const input1 = document.createElement("input");
+            input1.type = "hidden";
+            input1.name = "randomizer1";
+            input1.value = randomValue1;
+
+            const input2 = document.createElement("input");
+            input2.type = "hidden";
+            input2.name = "randomizer2";
+            input2.value = randomValue2;
+
+            form.appendChild(input1);
+            form.appendChild(input2);
+
+            // Append the form to the body and submit
+            document.body.appendChild(form);
+
+            // Slight delay to see console logs
+            console.log("Redirecting now...");
+            setTimeout(() => form.submit(), 500);
         };
     </script>
 </head>
 <body>
-    <h1>If you see this, GitHub Pages is working correctly.</h1>
+    <h1>Redirecting you to the form...</h1>
 </body>
 </html>
