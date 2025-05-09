@@ -7,9 +7,16 @@
             const randomValue1 = Math.floor(Math.random() * 3) + 1;
             const randomValue2 = Math.floor(Math.random() * 3) + 1;
 
+            // Log the values for testing
+            console.log(`Random values: randomizer1=${randomValue1}, randomizer2=${randomValue2}`);
+
             // Redirect to your Typeform link with the randomizer values as URL parameters
             const typeformURL = "https://form.typeform.com/to/AUtyjS3E";
-            window.location.href = `${typeformURL}?randomizer1=${randomValue1}&randomizer2=${randomValue2}`;
+            
+            // Add a delay for the redirection (to ensure everything loads first)
+            setTimeout(function() {
+                window.location.href = `${typeformURL}?randomizer1=${randomValue1}&randomizer2=${randomValue2}`;
+            }, 1000); // Delay for 1 second before redirecting
         };
     </script>
 </head>
