@@ -7,8 +7,13 @@
             const randomValue1 = Math.floor(Math.random() * 3) + 1;
             const randomValue2 = Math.floor(Math.random() * 3) + 1;
 
-            // Log the values for testing
+            // Log the random values to the browser console for debugging
             console.log(`Random values: randomizer1=${randomValue1}, randomizer2=${randomValue2}`);
+
+            // Ensure we are generating random values
+            if (isNaN(randomValue1) || isNaN(randomValue2)) {
+                console.error("Random values are not being generated properly");
+            }
 
             // Redirect to your Typeform link with the randomizer values as URL parameters
             const typeformURL = "https://form.typeform.com/to/AUtyjS3E";
