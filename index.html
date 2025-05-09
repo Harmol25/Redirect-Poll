@@ -2,7 +2,7 @@
 <html>
 <head>
     <script type="text/javascript">
-        window.onload = function() {
+        function redirectToTypeform() {
             console.log('Script loaded');
 
             // Generate random numbers for both questions (1, 2, or 3)
@@ -13,18 +13,15 @@
 
             // Construct the Typeform URL with the random values
             const typeformURL = `https://form.typeform.com/to/AUtyjS3E?randomizer1=${randomValue1}&randomizer2=${randomValue2}`;
-
-            // Log the full redirect URL for visibility
             console.log(`Redirecting to: ${typeformURL}`);
 
-            // Slight delay to see console logs
-            setTimeout(() => {
-                window.location.href = typeformURL;
-            }, 500);
-        };
+            // Redirect on button click
+            window.location.href = typeformURL;
+        }
     </script>
 </head>
 <body>
-    <h1>Redirecting you to the form...</h1>
+    <h1>Click the button to start the survey</h1>
+    <button onclick="redirectToTypeform()">Start Survey</button>
 </body>
 </html>
