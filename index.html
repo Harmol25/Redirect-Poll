@@ -3,33 +3,12 @@
 <head>
     <script type="text/javascript">
         window.onload = function() {
-            alert("Script loaded!"); // This should pop up when the page loads
-            console.log('Script loaded');  // Check if the script is running
-
-            // Generate random numbers for both questions (1, 2, or 3)
-            const randomValue1 = Math.floor(Math.random() * 3) + 1;
-            const randomValue2 = Math.floor(Math.random() * 3) + 1;
-
-            // Log the random values to the console for debugging
-            console.log(`Random values: randomizer1=${randomValue1}, randomizer2=${randomValue2}`);
-
-            // Check if random values are valid numbers
-            if (isNaN(randomValue1) || isNaN(randomValue2)) {
-                console.error("Random values are not being generated properly");
-            }
-
-            // Redirect to your Typeform link with the randomizer values as URL parameters
-            const typeformURL = "https://form.typeform.com/to/AUtyjS3E";
-            
-            // Add a delay for the redirection (to ensure everything loads first)
-            setTimeout(function() {
-                console.log("Redirecting now...");
-                window.location.href = `${typeformURL}?randomizer1=${randomValue1}&randomizer2=${randomValue2}`;
-            }, 1000); // Delay for 1 second before redirecting
+            alert("Hello, your script is running!");
+            console.log("Script is running correctly.");
         };
     </script>
 </head>
 <body>
-    <h1>Redirecting you to the form...</h1>
+    <h1>If you see this, GitHub Pages is working correctly.</h1>
 </body>
 </html>
