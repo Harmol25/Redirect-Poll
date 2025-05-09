@@ -3,15 +3,17 @@
 <head>
     <script type="text/javascript">
         window.onload = function() {
-            // Generate random numbers for both questions
+            // Generate random numbers for both questions (1, 2, or 3)
             const randomValue1 = Math.floor(Math.random() * 3) + 1;
             const randomValue2 = Math.floor(Math.random() * 3) + 1;
-            // Redirect to your Typeform with both randomizer values
-            window.location.href = `https://yourform.typeform.com/to/yourformid?randomizer1=${randomValue1}&randomizer2=${randomValue2}`;
+
+            // Redirect to your Typeform link with the randomizer values as URL parameters
+            const typeformURL = "https://form.typeform.com/to/AUtyjS3E";
+            window.location.href = `${typeformURL}?randomizer1=${randomValue1}&randomizer2=${randomValue2}`;
         };
     </script>
 </head>
 <body>
-https://form.typeform.com/to/AUtyjS3E#randomizer=xxxxx
+    Redirecting you to the form...
 </body>
 </html>
